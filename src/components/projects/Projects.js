@@ -1,10 +1,10 @@
-import Page from "../UI/Page";
 import style from "./Projects.module.css"; 
+import Panel from "../UI/Panel";
 
-export default function Projects(){
+export default function Projects(props){
   return (
-    <Page>
+    <Panel in={props.in}>
       <h1>Projects</h1>
-    </Page>
+    </Panel>
   )
 }

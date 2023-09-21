@@ -3,13 +3,23 @@
   height: 100vh; 
   background-color: white;
   position: fixed;
+  z-index: 1000;
 }
 
 .curtain-exit{
-  opacity: 1;
+  animation: fade-out 500ms ease-out forwards;
 }
 
-.curtain-exit-active{
-  opacity: 0;
-  transition: opacity 500ms ease-in-out;
+@keyframes fade-out{
+  0%{
+    background-color: rgb(255, 255, 255);
+    backdrop-filter: blur(5px);
+  }
+  50%{
+    background-color: rgba(255, 255, 255, 0);
+  }
+  100%{
+    background-color: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(0px);
+  }
 }

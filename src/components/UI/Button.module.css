@@ -1,0 +1,36 @@
+.button{
+  border: none;
+  background-color: transparent; 
+  font-family: Montserrat;
+  cursor: pointer;
+  transition: transform 100ms ease-in-out;
+  display: inline-block;
+}
+
+.button:hover{
+  transform: scale(1.1);
+}
+
+.language-button{
+  font-size: 1em;
+}
+
+.active{
+  color: var(--accent-1); 
+  text-decoration: solid underline;
+}
+
+.action-button{
+  font-size: 1.15em;
+  color: var(--accent-1); 
+}
+
+@media (max-width: 400px){
+  .language-button{
+    font-size: 0.9em;
+  }
+
+  .action-button{
+    font-size: 1em;
+  }
+}

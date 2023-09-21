@@ -1,5 +1,9 @@
 {
   "home": {
-    "title": "Frontend web developer"
+    "title": "Frontend web developer",
+    "language": "Language", 
+    "bio": "Hi, I'm a Frontend Web Developer from Warsaw, Poland. With a master’s degree from the Polish-Japanese Academy of Information Technology i have a blend of formal education and self-taught expertise that allow me to pursue my passion of building web applications that are elegant, interactive and user-friendly. I'm also committed to expanding my knowledge as I believe that continuous learning is a key to excel in this field. Beyond coding, I have an interest in visual arts, particularly digital art and photography. Feel free to explore my portfolio to see some of my recent work & don't hesitate to get in touch.",
+    "projects": "Projects",
+    "contact": "Contact"
   }
 }

@@ -1,7 +1,8 @@
 .page{
-  min-height: calc(100vh - 30px);
+  height: calc(100vh - 30px);
   width: calc(100% - 30px);
-  margin: 15px;
+  max-width: 1600px;
+  margin: 15px auto;
   padding: 10px;
   border: 1px solid var(--text-2); 
   box-sizing: border-box;
