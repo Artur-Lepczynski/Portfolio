@@ -1,0 +1,15 @@
+.curtain{
+  width: 100%; 
+  height: 100vh; 
+  background-color: white;
+  position: fixed;
+}
+
+.curtain-exit{
+  opacity: 1;
+}
+
+.curtain-exit-active{
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
+}

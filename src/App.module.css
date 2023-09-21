@@ -1,0 +1,5 @@
+.app-wrapper{
+  display: flex;
+  flex-direction: column;
+  background: fixed center/cover url(./images/background-1.jpg);
+}

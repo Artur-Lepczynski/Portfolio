@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import style from "./App.module.css";
+import "./colors.css";
+import { Suspense } from "react";
+import { useTranslation } from "react-i18next";
+import Home from "./components/home/Home";
+import Projects from "./components/projects/Projects";
+import Curtain from "./components/UI/Curtain";
 
-function App() {
+export default function App() {
+  const { t, i18n } = useTranslation();
+  const locales = {
+    en: "English",
+    pl: "Polski",
+  };
+
+  function handleLanguageChange() {
+    const newLanguage = i18n.language === "en" ? "pl" : "en";
+    i18n.changeLanguage(newLanguage);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Suspense fallback="...loading">
+      <Curtain />
+      <div className={style["app-wrapper"]}>
+        <Home />
+        <Projects/>
+      </div>
+    </Suspense>
   );
 }
-
-export default App;
