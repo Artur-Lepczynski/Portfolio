@@ -15,7 +15,13 @@ export default function Panel(props) {
       mountOnEnter
       unmountOnExit
     >
-      <div className={`${style.panel} ${props.className}`}>
+      <div
+        className={`${style.panel} ${
+          props.fadeDirection === "left"
+            ? style["panel-left"]
+            : style["panel-right"]
+        } ${props.className}`}
+      >
         {props.children}
       </div>
     </CSSTransition>

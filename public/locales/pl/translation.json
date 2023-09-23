@@ -5,5 +5,11 @@
     "bio": "Cześć, jestem Frontend Web Deweloperem z Warszawy. Połączenie tytułu magistra inżyniera uzyskanego w Polsko-Japońskiej Wyższej Szkole Technik Komputerowych i wiedzy zdobytej samemu pozwala mi realizować moją pasję budowania aplikacji internetowych, które są eleganckie, interaktywne i przyjazne dla użytkownika. Jestem także aktywnie zaangażowany w poszerzanie mojej wiedzy, ponieważ uważam, że ciągła nauka to klucz do osiągnięcia sukcesu w tej dziedzinie. Poza budowaniem aplikacji interesuję się sztukami wizualnymi, szczególnie sztuką cyfrową i fotografią. Zachęcam do przejrzenia mojego portfolio, aby zobaczyć niektóre z moich ostatnich prac i zapraszam do kontaktu.",
     "projects": "Projekty",
     "contact": "Kontakt"
+  }, 
+  "projects": {
+    "title": "Projekty", 
+    "subtitle": "Wybierz projekt", 
+    "contact": "Kontakt",
+    "more-projects": "Więcej projetów już wkrótce..."
   }
 }

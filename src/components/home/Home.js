@@ -1,5 +1,4 @@
 import { useTranslation } from "react-i18next";
-import Page from "../UI/Page";
 import style from "./Home.module.css";
 import Button from "../UI/Button";
 import Panel from "../UI/Panel";
@@ -12,11 +11,11 @@ export default function Home(props) {
   }
 
   function handlePanelChange(newPanel) {
-    props.onPanelChange(newPanel);
+    props.onPanelChange(newPanel, "right");
   }
 
   return (
-    <Panel className={style.home} in={props.in}>
+    <Panel className={style.home} in={props.in} fadeDirection="left">
       <div>
         <h1>Artur Lepczyński</h1>
         <p className={style.subtitle}>{t("home.title")}</p>
@@ -33,8 +32,6 @@ export default function Home(props) {
       </div>
       <div className={style["info-wrapper"]}>
         <div className={style["lang-controls"]}>
-          <p>{t("home.language")}:</p>
-          <div className={style["lang-buttons"]}>
             <Button
               type="language"
               active={i18n.language === "en"}
@@ -54,7 +51,7 @@ export default function Home(props) {
             >
               Polski
             </Button>
-          </div>
+          
         </div>
         <div className={style.bio}>
           <p>{t("home.bio")}</p>

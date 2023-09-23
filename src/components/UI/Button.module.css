@@ -5,6 +5,7 @@
   cursor: pointer;
   transition: transform 100ms ease-in-out;
   display: inline-block;
+  text-decoration: none;
 }
 
 .button:hover{
@@ -15,7 +16,7 @@
   font-size: 1em;
 }
 
-.active{
+.language-active{
   color: var(--accent-1); 
   text-decoration: solid underline;
 }
@@ -33,4 +34,20 @@
   .action-button{
     font-size: 1em;
   }
+}
+
+.project-button-wrapper{
+  display: flex;
+  align-items: center;
+}
+
+.project-button-icon{
+  margin: 0px 5px;
+  font-size: 0.8em;
+  color: var(--accent-2); 
+}
+
+.project-button{
+  font-size: 1.15em;
+  color: var(--accent-1); 
 }

@@ -1,5 +1,16 @@
-.app-wrapper{
-  display: flex;
-  flex-direction: column;
+.outer-wrapper {
   background: fixed center/cover url(./images/background-1.jpg);
+  overflow: hidden;
+}
+
+.inner-wrapper {
+  height: calc(100vh - 30px);
+  width: calc(100% - 30px);
+  max-width: 1600px;
+  margin: 15px auto;
+  padding: 10px;
+  border: 1px solid var(--text-2);
+  box-sizing: border-box;
+  color: var(--text-1);
+  user-select: none;
 }
