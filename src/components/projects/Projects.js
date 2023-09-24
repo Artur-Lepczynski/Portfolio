@@ -28,10 +28,10 @@ export default function Projects(props) {
       className={style.projects}
       in={props.in}
       fadeDirection={props.fadeDirection}
+      title={t("projects.title")}
+      subtitle={t("projects.subtitle")}
     >
       <div>
-        <h1>{t("projects.title")}</h1>
-        <p className={style.subtitle}>{t("projects.subtitle")}</p>
         <Button
           type="project"
           active={selectedProject === "listify"}
@@ -50,7 +50,7 @@ export default function Projects(props) {
               handlePanelChange("home");
             }}
           >
-            <i className={`fa-solid fa-chevron-left ${style.arrow}`}></i>
+            <i className={`fa-solid fa-angle-left ${style.arrow}`}></i>
           </Button>
           <i className={`fa-solid fa-circle ${style.dot}`}></i>
           <Button

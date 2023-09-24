@@ -5,9 +5,10 @@ import { useTranslation } from "react-i18next";
 import Home from "./components/home/Home";
 import Projects from "./components/projects/Projects";
 import Curtain from "./components/UI/Curtain";
+import Contact from "./components/contact/Contact";
 
 export default function App() {
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
 
   //home, projects, contact
   const [selectedPanel, setSelectedPanel] = useState("home");
@@ -28,15 +29,11 @@ export default function App() {
   const [distance, setDistance] = useState({ x: 0, y: 0 });
 
   function handleMouseMove(event) {
-    const x = event.clientX;
-    const y = event.clientY;
-    const width = window.innerWidth;
-    const height = window.innerHeight;
-    const originX = width / 2;
-    const originY = height / 2;
-    let xDist = x - originX;
+    const originX = window.innerWidth / 2;
+    const originY = window.innerHeight / 2;
+    let xDist = event.clientX - originX;
     if (xDist > 820) xDist = 820;
-    const yDist = y - originY;
+    const yDist = event.clientY - originY;
     const xMove = (xDist / 820) * -10;
     const yMove = (yDist / originY) * -10;
     setDistance({ x: xMove, y: yMove });
@@ -59,6 +56,10 @@ export default function App() {
             in={selectedPanel === "projects"}
             onPanelChange={handlePanelChange}
             fadeDirection={fadeDirection}
+          />
+          <Contact
+            in={selectedPanel === "contact"}
+            onPanelChange={handlePanelChange}
           />
         </div>
       </div>

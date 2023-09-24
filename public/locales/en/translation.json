@@ -15,5 +15,9 @@
       "description": "Listify is a web application that allows users to create and manage easy-to-use shopping lists. The users can add their frequented shops, and add products to them when creating a new list. It was built with React using:",
       "list-item-firebase": "Firebase for user and data management"
     }
+  }, 
+  "contact": {
+    "title": "Contact", 
+    "subtitle": "Get in touch"
   }
 }

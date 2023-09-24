@@ -15,43 +15,43 @@ export default function Home(props) {
   }
 
   return (
-    <Panel className={style.home} in={props.in} fadeDirection="left">
-      <div>
-        <h1>Artur Lepczyński</h1>
-        <p className={style.subtitle}>{t("home.title")}</p>
-        <div className={style["button-wrapper"]}>
-          <Button type="button" onClick={() => handlePanelChange("projects")}>
-            <i className="fa-solid fa-arrow-right"></i>
-            {t("home.projects")}
-          </Button>
-          <Button type="button" onClick={() => handlePanelChange("contact")}>
-            <i className="fa-solid fa-arrow-right"></i>
-            {t("home.contact")}
-          </Button>
-        </div>
+    <Panel
+      in={props.in}
+      fadeDirection="left"
+      title="Artur Lepczyński"
+      subtitle={t("home.title")}
+    >
+      <div className={style["button-wrapper"]}>
+        <Button type="button" onClick={() => handlePanelChange("projects")}>
+          <i className="fa-solid fa-arrow-right"></i>
+          {t("home.projects")}
+        </Button>
+        <Button type="button" onClick={() => handlePanelChange("contact")}>
+          <i className="fa-solid fa-arrow-right"></i>
+          {t("home.contact")}
+        </Button>
       </div>
       <div className={style["info-wrapper"]}>
         <div className={style["lang-controls"]}>
-            <Button
-              type="language"
-              active={i18n.language === "en"}
-              onClick={() => {
-                handleLanguageChange("en");
-              }}
-            >
-              English
-            </Button>
-            <i className="fa-solid fa-circle"></i>
-            <Button
-              type="language"
-              active={i18n.language === "pl"}
-              onClick={() => {
-                handleLanguageChange("pl");
-              }}
-            >
-              Polski
-            </Button>
-          
+          <Button
+            type="language"
+            active={i18n.language === "en"}
+            onClick={() => {
+              handleLanguageChange("en");
+            }}
+          >
+            English
+          </Button>
+          <i className="fa-solid fa-circle"></i>
+          <Button
+            type="language"
+            active={i18n.language === "pl"}
+            onClick={() => {
+              handleLanguageChange("pl");
+            }}
+          >
+            Polski
+          </Button>
         </div>
         <div className={style.bio}>
           <p>{t("home.bio")}</p>
