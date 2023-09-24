@@ -22,10 +22,10 @@ export default function Panel(props) {
             : style["panel-right"]
         } ${props.className}`}
       >
-        <div>
+        <header>
           <h1 className={style.title}>{props.title}</h1>
           <p className={style.subtitle}>{props.subtitle}</p>
-        </div>
+        </header>
         {props.children}
       </div>
     </CSSTransition>

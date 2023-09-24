@@ -1,25 +1,107 @@
 .curtain{
   width: 100%; 
   height: 100vh; 
-  background-color: white;
   position: fixed;
   z-index: 1000;
+  backdrop-filter: blur(5px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.curtain-exit{
-  animation: fade-out 500ms ease-out forwards;
+.curtain-exit-active{
+  backdrop-filter: blur(0px);
+  transition: backdrop-filter 200ms;
 }
 
-@keyframes fade-out{
-  0%{
-    background-color: rgb(255, 255, 255);
-    backdrop-filter: blur(5px);
+.curtain-left{
+  width: 50%;
+  height: 100vh; 
+  background-color: white;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
+.curtain-right{
+  width: 50%;
+  height: 100vh; 
+  background-color: white;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+
+.curtain-both-exit{
+  transform: translateX(0px);
+}
+
+.curtain-left-exit-active{
+  transform: translateX(-100%);
+  transition: transform 500ms ease-out;
+}
+
+.curtain-right-exit-active{
+  transform: translateX(100%);
+  transition: transform 500ms ease-out;
+}
+
+.text{
+  width: 100%;
+  max-width: 500px;
+  height: 200px;
+  z-index: 1100;
+
+  color: var(--text-1);
+  user-select: none;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: color-fade 2s 1s linear 1 forwards;
+}
+
+@keyframes color-fade {
+  from {
+    color: var(--text-1);
   }
-  50%{
-    background-color: rgba(255, 255, 255, 0);
+  to {
+    color: var(--accent-2);
   }
-  100%{
-    background-color: rgba(255, 255, 255, 0);
-    backdrop-filter: blur(0px);
+}
+
+.title{
+  margin: 10px 0px;
+  font-size: 2.3em;
+  font-weight: 200;
+}
+
+.subtitle{
+  margin: 10px 0px;
+  font-size: 1.3em;
+  font-weight: 300;
+}
+
+.wheel{
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: 0px 0px 40px 25px white;
+  position: absolute;
+  bottom: -50px;
+  animation: rotate 4s 1s linear 1 forwards;
+  transform-origin: bottom;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }

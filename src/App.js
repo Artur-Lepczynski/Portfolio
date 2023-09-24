@@ -9,8 +9,7 @@ import Contact from "./components/contact/Contact";
 
 export default function App() {
   const { i18n } = useTranslation();
-
-  //home, projects, contact
+  
   const [selectedPanel, setSelectedPanel] = useState("home");
   const [fadeDirection, setFadeDirection] = useState("right");
 
@@ -43,7 +42,7 @@ export default function App() {
     <Suspense fallback="...loading">
       <Curtain />
       <div className={style["outer-wrapper"]} onMouseMove={handleMouseMove}>
-        <div
+        <main
           className={style["inner-wrapper"]}
           style={{ transform: `translate(${distance.x}px, ${distance.y}px)` }}
         >
@@ -61,7 +60,7 @@ export default function App() {
             in={selectedPanel === "contact"}
             onPanelChange={handlePanelChange}
           />
-        </div>
+        </main>
       </div>
     </Suspense>
   );
