@@ -13,77 +13,77 @@ export default function ParticleBackground() {
 
   const options: ISourceOptions = useMemo(() => {
 
-
-    const manualParticles = [];
-    const width = window.innerWidth;
-    const height = window.innerHeight;
-    const pixelSpacing = 40;
-
-    const widthStep = (pixelSpacing / width) * 100;
-    const heightStep = (pixelSpacing / height) * 100;
-
-    for (
-      let currentWidth = widthStep;
-      currentWidth < 99;
-      currentWidth += widthStep
-    ) {
-      for (
-        let currentHeight = heightStep;
-        currentHeight < 99;
-        currentHeight += heightStep
-      ) {
-        manualParticles.push({
-          position: {
-            x: currentWidth,
-            y: currentHeight,
-          },
-          options: {
-            opacity: {
-              value: getDistanceFromCenter(currentWidth, currentHeight, width, height)
-            },
-          },
-        });
-      }
-    }
-
     return {
       background: {
-        color: {
-          value: "#2b2a33",
-        },
+        image: "linear-gradient(-15deg, #45434e 0%, #000000 100%)",
         opacity: 1,
       },
       particles: {
+        number: {
+          value: 120,
+          density: {
+            enable: true,
+            width: 1920,
+            height: 1080,
+          },
+        },
         size: {
-          value: 5,
+          value: { min: 1, max: 2 },
+          animation: {
+            enable: true,
+            speed: 1,
+            size_min: 0.5,
+            sync: false,
+          },
         },
         color: {
           value: "#ffffff",
         },
-        shape: {
-          type: "polygon", 
-          options: {
-            polygon: {
-              sides: 3,
-            }
-          }
-        }, 
+        opacity: {
+          value: { min: 0.3, max: 0.8 },
+          animation: {
+            enable: true,
+            speed: 0.5,
+            opacity_min: 0.2,
+            sync: false,
+          },
+        },
+        links: {
+          enable: true,
+          distance: 40,
+          color: "#ffffff",
+          opacity: 0.2,
+          width: 1,
+        },
+        move: {
+          enable: true,
+          speed: { min: 0.5, max: 2.5 },
+          direction: MoveDirection.none,
+          random: true,
+          straight: false,
+          outModes: {
+            default: OutMode.out,
+          },
+        },
       },
-      manualParticles,
       interactivity: {
         events: {
           onHover: {
             enable: true, 
-            mode: ["bubble",]
+            mode: ["grab"], 
+            parallax: {
+              enable: true, 
+              force: 60, 
+              smooth: 10,
+            }
           }
         },
         modes: {
-          bubble: {
-            distance: 220, 
-            duration: 2, 
-            size: 15, 
-            color: {
-              value: "#a8ffa8"
+          grab: {
+            distance: 200,
+            links: {
+              opacity: 0.6,
+              color: "#a8f2ff",
             }
           },
         }
@@ -117,32 +117,4 @@ export default function ParticleBackground() {
   }
 
   return <></>;
-}
-
-function getDistanceFromCenter(
-  x: number,
-  y: number,
-  width: number,
-  height: number
-) {
-  const opacityMax = 1;
-  const opacityMin = 0; 
-  const xPixels = x * width / 100; 
-  const yPixels = y * height / 100; 
-
-  const centerX = width / 2;
-  const centerY = height / 2;
-
-  let distanceX = centerX - xPixels;
-  if (distanceX < 0) distanceX *= -1;
-
-  let distanceY = centerY - yPixels;
-  if (distanceY < 0) distanceY *= -1;
-
-  const distance = Math.sqrt(distanceX ** 2 + distanceY ** 2);
-  let opacity = (distance - 520) / (centerX + 600);
-
-  if (opacity < opacityMin) opacity = opacityMin;
-  if (opacity > opacityMax) opacity = opacityMax;
-  return opacity; 
 }
