@@ -1,0 +1,5 @@
+.background {
+  min-height: 600px;
+  background-color: rgba(75, 75, 75, 0.1);
+  backdrop-filter: blur(2px);
+}
