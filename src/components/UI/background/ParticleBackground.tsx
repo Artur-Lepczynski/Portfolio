@@ -15,7 +15,7 @@ export default function ParticleBackground() {
 
     return {
       background: {
-        image: "linear-gradient(-15deg, #45434e 0%, #000000 100%)",
+        image: "linear-gradient(-15deg, #434343 0%, #000000 100%)",
         opacity: 1,
       },
       particles: {
@@ -83,7 +83,7 @@ export default function ParticleBackground() {
             distance: 200,
             links: {
               opacity: 0.6,
-              color: "#a8f2ff",
+              color: "#00957c",
             }
           },
         }

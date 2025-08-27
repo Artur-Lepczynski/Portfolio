@@ -5,3 +5,41 @@
   justify-content: center;
   align-items: center;
 }
+
+.name-wrapper {
+  min-height: 300px;
+  user-select: none;
+}
+
+.name {
+  margin: 0;
+  font-size: 120px;
+  font-weight: 300;
+  background-image: linear-gradient(-15deg, #b92b27 0%, #1565C0 100%);
+  color: transparent;
+  background-clip: text;
+}
+
+.title {
+  margin: 0;
+  font-size: 50px;
+  font-weight: 200;
+  text-align: right;
+  color: var(--text-color-1);
+}
+
+.separator {
+  margin: 15px;
+  height: 1px;
+  background-image: linear-gradient(90deg, transparent 0%, rgb(195, 195, 195) 50%, transparent 100%);
+}
+
+.about-wrapper {
+  margin: 0 auto;
+  max-width: 850px;
+  text-align: center;
+}
+
+.about {
+  color: var(--text-color-1);
+}

@@ -1,5 +1,8 @@
 .background {
-  min-height: 600px;
-  background-color: rgba(75, 75, 75, 0.1);
+  margin-bottom: 300px;
+  padding: 5%;
+  min-height: 120vh;
+  background-color: rgba(100, 100, 100, 0.1);
   backdrop-filter: blur(2px);
+  clip-path: polygon(0 130px, 100% 0%, 100% 90%, 0% 100%);
 }
