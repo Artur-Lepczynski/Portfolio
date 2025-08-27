@@ -1,0 +1,17 @@
+.fragment {
+  height: 100%;
+  width: 200px;
+  transform-origin: top;
+  position: relative;
+  /* background-color: black; */
+  animation: change 2000ms forwards;
+}
+
+@keyframes change {
+  from{
+    background-color: rgb(201, 201, 201);
+  }
+  to{
+    background-color: black;
+  }
+}

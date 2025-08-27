@@ -1,0 +1,21 @@
+.background {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  background-color: rgb(201, 201, 201);
+}
+
+.curtain {
+  width: 130vw;
+  height: 100vh;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  transform-origin: top;
+  transform: skewX(-15deg);
+}
