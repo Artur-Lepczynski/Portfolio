@@ -3,7 +3,6 @@
   width: 200px;
   transform-origin: top;
   position: relative;
-  /* background-color: black; */
   animation: change 2000ms forwards;
 }
 

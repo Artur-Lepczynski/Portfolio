@@ -6,7 +6,7 @@ import { motion } from "motion/react";
 
 export default function Curtain() {
   const fragmentWidthPx = 200;
-  const fragmentsNumber = Math.ceil(window.innerWidth / fragmentWidthPx) + 4;
+  const fragmentsNumber = Math.ceil(window.innerWidth / fragmentWidthPx) + 6;
   const fragmentDuration = 0.5;
   const fragmentStagger = 0.075;
   const idleTime = 0.4;
