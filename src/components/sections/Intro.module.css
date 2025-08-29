@@ -1,12 +1,11 @@
 .background {
-  height: 98vh;
-  min-height: 600px;
+  min-height: 98vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.name-wrapper {
+.wrapper {
   min-height: 300px;
   user-select: none;
 }
@@ -16,6 +15,7 @@
   font-size: 120px;
   font-weight: 300;
   background-image: linear-gradient(-15deg, #b92b27 0%, #1565C0 100%);
+  text-align: center;
   background-clip: text;
   color: transparent;
   will-change: transform, opacity;
@@ -36,11 +36,64 @@
 }
 
 .about-wrapper {
-  margin: 0 auto;
+  width: 95%;
   max-width: 850px;
+  margin: 0 auto;
   text-align: center;
 }
 
 .about {
   color: var(--text-color-1);
+}
+
+@media (max-width: 1250px) {
+  .wrapper {
+    width: 850px;
+  }
+
+  .name {
+    font-size: 100px;
+  }
+
+  .title {
+    margin-right: 45px;
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 850px) {
+  .wrapper {
+    width: 520px;
+    min-height: 220px;
+  }
+
+  .name {
+    font-size: 60px;
+  }
+
+  .title {
+    margin-right: 32px;
+    font-size: 25px;
+  }
+
+  .about {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 530px) {
+  .name {
+    font-size: 48px;
+  }
+
+  .title {
+    margin: 0;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 22px;
+  }
+
+  .about-wrapper {
+    width: 85%;
+  }
 }

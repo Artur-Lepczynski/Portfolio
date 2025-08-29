@@ -10,7 +10,7 @@ interface AppearingTextProps {
 
 export function AppearingText({
   text,
-  delay = 0,
+  delay = 2.2,
   staggerDelay = 0.1,
   className = "",
 }: AppearingTextProps) {
@@ -22,6 +22,10 @@ export function AppearingText({
       transition={{ delay }}
     >
       {text.split("").map((letter, index) => {
+        if (letter === "\n") {
+          return <br key={index} />;
+        }
+
         return (
           <motion.span
             className={style.letter}
