@@ -27,7 +27,7 @@ export default function Intro() {
           className={style.title}
           initial={{ scaleY: 0 }}
           animate={{ scaleY: 1 }}
-          transition={{ delay: 4.2 }}
+          transition={{ delay: 5.2 }}
         >
           web developer
         </motion.h2>
@@ -35,7 +35,7 @@ export default function Intro() {
           className={style.separator}
           initial={{ scaleX: 0 }}
           animate={{ scaleX: 1 }}
-          transition={{ delay: 4.5, duration: 1.5 }}
+          transition={{ delay: 5.5, duration: 1.5 }}
         ></motion.div>
         <div className={style["about-wrapper"]}>
           <ReactTyped
@@ -44,7 +44,7 @@ export default function Intro() {
               "Hi! 🙂 I'm a graduate of the Polish-Japanese Academy of Information Technology with multiple years of experience in frontend development. 💻 Skilled in TypeScript and React, I'm looking for new challenges to further grow and contribute to exciting projects! 🚀",
             ]}
             typeSpeed={8}
-            startDelay={6100}
+            startDelay={7100}
             cursorChar=""
           />
         </div>

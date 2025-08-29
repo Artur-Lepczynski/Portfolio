@@ -7,10 +7,11 @@
 }
 
 @keyframes change {
-  from{
+  from {
     background-color: rgb(201, 201, 201);
   }
-  to{
+
+  to {
     background-color: black;
   }
 }

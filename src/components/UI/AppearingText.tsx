@@ -10,7 +10,7 @@ interface AppearingTextProps {
 
 export function AppearingText({
   text,
-  delay = 2.2,
+  delay = 3.2,
   staggerDelay = 0.1,
   className = "",
 }: AppearingTextProps) {
